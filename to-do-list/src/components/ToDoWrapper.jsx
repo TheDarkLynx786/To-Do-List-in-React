@@ -1,5 +1,11 @@
-export const ToDoWrapper = () => {
+import Form from "./Form"
+
+function ToDoWrapper() {
     return (
-        <div> ToDoWrapper </div>
-    )
+        <div> 
+            <Form/> 
+        </div>
+    );
 }
+
+export default ToDoWrapper
