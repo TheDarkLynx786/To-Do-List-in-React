@@ -1,6 +1,9 @@
-function ToDo() {
+
+function ToDo({input}) {
     return (
-        <div> ToDo </div>
+        <div> 
+            <p id="taskbank">{input}</p> 
+        </div>
     );
 }
 
