@@ -1,8 +1,8 @@
 
 function ToDo({input}) {
     return (
-        <div> 
-            <p id="taskbank">{input}</p> 
+        <div className="todo-entry-style"> 
+            {input}
         </div>
     );
 }

@@ -19,6 +19,26 @@
 
 }
 
+.todo-entry-style {
+  background-color: rgb(82, 82, 116);
+  border-radius: 10px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  align-items: center;
+  overflow: auto;
+  justify-content: center;
+  
+
+  button, input {
+    padding: 10px;
+    margin: 5px;
+  }
+
+
+}
+
 .form-bg {
   background-color: rgb(47, 47, 95);
   border-radius: 10px;;
