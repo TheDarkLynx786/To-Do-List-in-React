@@ -6,22 +6,33 @@ import ToDo from "./ToDo"
 
 
 
-function Form() {
+function Form(props) {
     
     const [input, setInput] = useState();
     const inpRef = useRef();
     
-    const clickHandler = () => {
-        inpRef.current.focus();
-        setInput(inpRef.current.value);
+    const changeHandler = e => {
+        setInput(e.target.value);
+    }
+    
+    const submitHandler = e => {
+        e.preventDefault();
+        
+        props.onSubmit({
+            id: Math.floor(Math.random() * 10000),
+            text: input
+        });
+
+        setInput('');
+
     };
 
 
     return (
         <>
         <div className="form-style">
-            <input type="text" ref={inpRef} placeholder="Enter a New Task"/>
-            <button onClick={clickHandler}>Add</button>
+            <input type="text" ref={inpRef} onChange={changeHandler} placeholder="Enter a New Task"/>
+            <button onClick={submitHandler}>Add</button>
         </div>
         <ToDo input={input}/>
         </>

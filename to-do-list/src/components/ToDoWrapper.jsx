@@ -5,13 +5,22 @@ import ToDo from "./ToDo"
 
 
 function ToDoWrapper() {
-    const []
+    const [todos, setTodos] = useState([])
     
+    const addTask = todo => {
+        if(!todo.text || (/\s+/g).test(todo.text)) return;
+
+        const newTasks = [todo, ...todos];
+        setTodos(newTasks);
+
+        console.log(...todos);
+        
+    };
     
     return (
         <div className="form-bg"> 
             <h3>ToDo</h3>
-            <Form/>
+            <Form onSubmit={addTask}/>
         </div>
     );
 }
